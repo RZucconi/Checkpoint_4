@@ -10,3 +10,55 @@ generator client {
   provider = "prisma-client-js"
 }
 
+model admin {
+  id    Int @id @default(autoincrement())
+  email String @unique
+}
+
+model royalAsset {
+  id          Int @id @default(autoincrement())
+  label       String
+  description String?
+  imageUrl    String?
+  reservation royalAssetReservation[]
+}
+
+model reservation {
+  id          Int @id @default(autoincrement())
+  date        DateTime
+  visitor     visitor[]
+  royalAsset  royalAssetReservation[]
+}
+
+model royalAssetReservation {
+  royalAsset    royalAsset @relation(fields: [royalAssetId], references: [id])
+  royalAssetId  Int
+  reservation   reservation @relation(fields: [reservationId], references: [id])
+  reservationId Int
+
+  @@id([royalAssetId, reservationId])
+}
+
+model visitor {
+  id            Int @id @default(autoincrement())
+  email         String
+  reservation   reservation @relation(fields: [reservationId], references: [id])
+  reservationId Int
+}
+
+model royalFamily {
+  id          Int @id @default(autoincrement())
+  firstName   String
+  lastName    String
+  description String?
+  imageUrl    String?
+  socialLink  socialLink[]
+}
+
+model socialLink {
+  id            Int @id @default(autoincrement())
+  label         String
+  url           String
+  royalFamily   royalFamily @relation(fields: [royalFamilyId], references: [id])
+  royalFamilyId Int
+}
