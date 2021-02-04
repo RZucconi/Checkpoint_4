@@ -1,0 +1,34 @@
+.homeCard {
+  display: flex;
+  width: 100%;
+}
+
+.homeCardReverse {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  margin: 10px;
+}
+
+.article p {
+  text-align: justify;
+}
+
+.article button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  align-self: flex-end;
+}
+
+.cardPicture {
+  width: 30vw;
+  margin: 10px;
+}
