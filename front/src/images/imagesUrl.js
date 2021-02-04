@@ -8,3 +8,15 @@ export const castlePicture =
 
 export const moreVisitPicture =
   'https://i.ibb.co/pPbQg10/more-visit-picture-1920x1440.jpg';
+
+export const facebookIcon =
+  'https://i.ibb.co/GdMw4BS/Transparent-bgd-facebook-logo.png';
+
+export const twitterIcon =
+  'https://i.ibb.co/F4bFNhz/Transparent-bgd-twitter-logo.png';
+
+export const instagramIcon =
+  'https://i.ibb.co/1T9KTDk/Transparent-bgd-instagram-logo.png';
+
+export const pinterestIcon =
+  'https://i.ibb.co/F4bFNhz/Transparent-bgd-twitter-logo.png';

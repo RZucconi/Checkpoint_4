@@ -1,0 +1,18 @@
+.royalCard {
+  display: flex;
+  width: 100%;
+}
+
+.royalPicture {
+  width: 10%;
+  height: auto;
+  margin: 10px;
+  border-radius: 50px;
+}
+
+.royalDescription {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  margin: 10px;
+}
