@@ -1,0 +1,48 @@
+/* #contact_us {
+    background-image: url(https://cdn.glitch.com/c85637ec-c85a-4dbe-82fe-effc32b6ddeb%2FTransparent_bgd_crown_header_banner_197x80.png?v=1591640970436);
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 85px 20px 20px 20px;
+  }
+   */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #dbae6b;
+  width: 380px;
+  padding: 20px 20px;
+  font-size: 1.2em;
+  color: #000;
+  border-radius: 10px;
+}
+
+.label {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+input {
+  border-radius: 5px 5px;
+  padding: 5px;
+}
+
+button {
+  border-radius: 10px 10px;
+  background-color: wheat;
+  margin: 5px 0;
+  padding: 5px;
+  border-style: none;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #000;
+  color: wheat;
+}
