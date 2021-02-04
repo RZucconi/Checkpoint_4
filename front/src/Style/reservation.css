@@ -1,0 +1,54 @@
+/* #contact_us {
+    background-image: url(https://cdn.glitch.com/c85637ec-c85a-4dbe-82fe-effc32b6ddeb%2FTransparent_bgd_crown_header_banner_197x80.png?v=1591640970436);
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 85px 20px 20px 20px;
+  }
+   */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form {
+  background-color: rgba(231, 231, 231, 0.2);
+  width: 380px;
+  padding: 20px 20px;
+  font-size: 1.2em;
+}
+
+.urmess {
+  margin-bottom: 1em;
+}
+
+input {
+  border-radius: 5px 5px;
+  padding: 5px;
+}
+
+::placeholder {
+  font-style: italic;
+  font-weight: bold;
+  color: rgba(143, 143, 143, 0.7);
+}
+
+textarea {
+  width: 100%;
+  border-radius: 10px 10px;
+}
+
+.checkbox {
+  font-size: 0.7em;
+}
+
+button {
+  border-radius: 10px 10px;
+  background-color: rgb(197, 197, 197);
+  padding: 5px;
+  border-style: none;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(219, 174, 106);
+}

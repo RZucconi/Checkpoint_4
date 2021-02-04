@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-.homeCardReverse {
+.homeCard:nth-child(even) {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -26,6 +26,10 @@
   height: 40px;
   border-radius: 10px;
   align-self: flex-end;
+}
+
+.notDisplay {
+  display: none;
 }
 
 .cardPicture {

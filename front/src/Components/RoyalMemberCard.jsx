@@ -14,12 +14,12 @@ export default function RoyalMemberCard(member) {
 
   useEffect(() => {
     setCurrentData(member.member);
-  }, [member]);
+  }, [member.member]);
 
   useEffect(() => {
     const promiseSocials = getRoyalMemberSocialLink(currentData.id);
     promiseSocials.then(socialsPromise, failPromise);
-  }, []);
+  }, [currentData.id]);
 
   console.log(socials);
 
