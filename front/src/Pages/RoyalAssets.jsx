@@ -20,17 +20,17 @@ export default function RoyalAssets() {
   }, []);
   console.log(royalAssets);
   return (
-    <>
+    <div className="container">
+      <h2>Royal Assets</h2>
       {royalAssets.length === 0 ? (
         <h2>Loading ...</h2>
       ) : (
         <>
-          <h2>Royal Assets</h2>
           {royalAssets.map((asset) => (
             <GenericCard datas={asset} />
           ))}
         </>
       )}
-    </>
+    </div>
   );
 }

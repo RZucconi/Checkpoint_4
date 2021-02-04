@@ -21,9 +21,6 @@ export default function RoyalMemberCard(member) {
     promiseSocials.then(socialsPromise, failPromise);
   }, [currentData.id]);
 
-  console.log(socials);
-
-  console.log(member.member);
   return (
     <div className="royalCard">
       <img

@@ -10,15 +10,22 @@
   flex-direction: column;
   align-items: center;
 }
+
 form {
-  background-color: rgba(231, 231, 231, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #dbae6b;
   width: 380px;
   padding: 20px 20px;
   font-size: 1.2em;
+  color: #000;
+  border-radius: 10px;
 }
 
-.urmess {
-  margin-bottom: 1em;
+.label {
+  margin: 5px 0;
+  font-weight: bold;
 }
 
 input {
@@ -26,29 +33,16 @@ input {
   padding: 5px;
 }
 
-::placeholder {
-  font-style: italic;
-  font-weight: bold;
-  color: rgba(143, 143, 143, 0.7);
-}
-
-textarea {
-  width: 100%;
-  border-radius: 10px 10px;
-}
-
-.checkbox {
-  font-size: 0.7em;
-}
-
 button {
   border-radius: 10px 10px;
-  background-color: rgb(197, 197, 197);
+  background-color: wheat;
+  margin: 5px 0;
   padding: 5px;
   border-style: none;
   font-weight: bold;
 }
 
 button:hover {
-  background-color: rgb(219, 174, 106);
+  background-color: #000;
+  color: wheat;
 }

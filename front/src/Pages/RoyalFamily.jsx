@@ -20,17 +20,17 @@ export default function RoyalFamily() {
   }, []);
 
   return (
-    <>
+    <div className="container">
+      <h2>The Royal Family</h2>
       {royalFamily.length === 0 ? (
         <h2>Loading ...</h2>
       ) : (
         <>
-          <h2>The Royal Family</h2>
           {royalFamily.map((member) => (
             <RoyalMemberCard member={member} />
           ))}
         </>
       )}
-    </>
+    </div>
   );
 }

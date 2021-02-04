@@ -13,6 +13,15 @@ function axiosGetPromise(url) {
   });
 }
 
+function axiosPostPromise(url, datas) {
+  return new Promise((resolve, reject) => {
+    axios
+      .post(url, datas)
+      .then((response) => resolve(response))
+      .catch((error) => reject(error));
+  });
+}
+
 export function getRoyalFamily() {
   const url = BASE_URL.concat('royal-family');
 
@@ -29,4 +38,9 @@ export function getRoyalAsset() {
   const url = BASE_URL.concat('royal-assets');
 
   return axiosGetPromise(url);
+}
+
+export function postReservation(reservation) {
+  const url = BASE_URL.concat('reservation');
+  return axiosPostPromise(url, reservation);
 }
