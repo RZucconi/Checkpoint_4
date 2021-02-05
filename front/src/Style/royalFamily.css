@@ -24,3 +24,18 @@
   width: 70vw;
   margin: 10px;
 }
+
+.membersSocials {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.socialLink {
+  text-decoration: none;
+  color: wheat;
+}
+
+.socialLink:hover {
+  color: #dbae6b;
+}

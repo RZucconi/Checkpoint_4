@@ -33,13 +33,18 @@ export default function RoyalMemberCard(member) {
           {currentData.firstName} {currentData.lastName}
         </h3>
         <p>{currentData.description}</p>
-        <div>
-          <h4>Follow this member :</h4>
+        <div className="membersSocials">
+          <h4>Follow this member on :</h4>
           {socials.length === 0 ? (
             <p> Pas de réseau social enregistré</p>
           ) : (
             socials.map((social) => (
-              <a href={social.url} target="_blank" rel="noreferrer">
+              <a
+                className="socialLink"
+                href={social.url}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {social.label}
               </a>
             ))
