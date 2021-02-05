@@ -42,5 +42,18 @@ export function getRoyalAsset() {
 
 export function postReservation(reservation) {
   const url = BASE_URL.concat('reservation');
+
   return axiosPostPromise(url, reservation);
+}
+
+export function postRoyalMember(member) {
+  const url = BASE_URL.concat('royal-family');
+
+  return axiosPostPromise(url, member);
+}
+
+export function postRoyalAsset(asset) {
+  const url = BASE_URL.concat('royal-assets');
+
+  return axiosPostPromise(url, asset);
 }

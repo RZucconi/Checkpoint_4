@@ -30,7 +30,7 @@ export default function RoyalMemberCard(member) {
       />
       <div className="royalDescription">
         <h3>
-          {currentData.lastName} {currentData.firstName}
+          {currentData.firstName} {currentData.lastName}
         </h3>
         <p>{currentData.description}</p>
         <div>

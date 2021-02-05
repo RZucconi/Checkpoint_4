@@ -1,7 +1,7 @@
 import Home from '../Pages/Home';
-import Reservation from '../Pages/Reservation';
-import RoyalAssets from '../Pages/RoyalAssets';
 import RoyalFamily from '../Pages/RoyalFamily';
+import RoyalAssets from '../Pages/RoyalAssets';
+import Reservation from '../Pages/Reservation';
 
 export const links = [
   { path: '/', name: 'Home', Component: Home },
