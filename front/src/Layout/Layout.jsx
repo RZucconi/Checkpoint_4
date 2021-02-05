@@ -1,6 +1,7 @@
 import { Route, useLocation } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import NavBar from '../Components/NavBar';
+import Admin from '../Pages/Admin';
 
 import { links } from '../Components/links';
 
@@ -20,6 +21,8 @@ export default function Layout() {
             <Component />
           </Route>
         ))}
+
+        <Route exact path="/admin" component={Admin} />
         <Footer />
       </main>
     </>

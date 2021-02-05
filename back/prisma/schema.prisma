@@ -27,7 +27,9 @@ model royalAsset {
 model reservation {
   id          Int @id @default(autoincrement())
   date        DateTime
-  visitor     visitor[]
+  firstName   String
+  lastName    String
+  email       String
   royalAsset  royalAssetReservation[]
 }
 
@@ -38,13 +40,6 @@ model royalAssetReservation {
   reservationId Int
 
   @@id([royalAssetId, reservationId])
-}
-
-model visitor {
-  id            Int @id @default(autoincrement())
-  email         String
-  reservation   reservation @relation(fields: [reservationId], references: [id])
-  reservationId Int
 }
 
 model royalFamily {

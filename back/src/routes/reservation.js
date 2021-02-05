@@ -12,26 +12,15 @@ router.get('/', async (req, res, next) => {
   }
 });
 
-router.get('/:id/register-visitors', async (req, res, next) => {
-  const { id } = req.params;
-  try {
-    const results = await prisma.visitor.findMany({
-      where: {
-        reservationId: parseInt(id, 10),
-      },
-    });
-    res.status(200).json(results);
-  } catch (err) {
-    next(err);
-  }
-});
-
 router.post('/', async (req, res, next) => {
   try {
-    const { date } = req.body;
+    const { date, firstName, lastName, email } = req.body;
     const results = await prisma.reservation.create({
       data: {
         date,
+        firstName,
+        lastName,
+        email,
       },
     });
     res.status(201).json(results);
@@ -44,13 +33,16 @@ router.post('/', async (req, res, next) => {
 router.put('/:id', async (req, res, next) => {
   try {
     const { id } = req.params;
-    const { date } = req.body;
+    const { date, firstName, lastName, email } = req.body;
     const results = await prisma.reservation.update({
       where: {
         id: parseInt(id, 10),
       },
       data: {
         date,
+        firstName,
+        lastName,
+        email,
       },
     });
     res.status(200).json(results);

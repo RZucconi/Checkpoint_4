@@ -14,6 +14,23 @@ import '../Style/footer.css';
 export default function Footer() {
   return (
     <footer className="footer">
+      <div className="map">
+        <h4>Location :</h4>
+        <MapContainer
+          className="map"
+          center={[41.71667, 44.83333]}
+          zoom={13}
+          scrollWheelZoom={false}
+        >
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[41.71667, 44.83333]}>
+            <Popup>Royal Palace Location</Popup>
+          </Marker>
+        </MapContainer>
+      </div>
       <div className="socialNetwork">
         <h4>Follow us :</h4>
         <a href={socialsLinks[0].path} target="_blank" rel="noreferrer">
@@ -39,23 +56,6 @@ export default function Footer() {
             alt="pinterest icon"
           />
         </a>
-      </div>
-      <div className="map">
-        <h4>Location :</h4>
-        <MapContainer
-          className="map"
-          center={[41.71667, 44.83333]}
-          zoom={13}
-          scrollWheelZoom={false}
-        >
-          <TileLayer
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={[41.71667, 44.83333]}>
-            <Popup>Royal Palace Location</Popup>
-          </Marker>
-        </MapContainer>
       </div>
       <div className="admin">
         <h4>Admin:</h4>
